@@ -1,5 +1,7 @@
 package com.justwayward.reader.base;
 
+import android.support.v4.content.ContextCompat;
+
 import com.justwayward.reader.R;
 import com.justwayward.reader.bean.support.SelectionEvent;
 import com.justwayward.reader.view.SelectionLayout;
@@ -86,7 +88,7 @@ public abstract class BaseCommuniteActivity extends BaseActivity implements Sele
             case 0:
                 switch (position) {
                     case 0:
-                        distillate = "";
+                        distillate = "false";
                         break;
                     case 1:
                         distillate = "true";

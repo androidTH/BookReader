@@ -18,6 +18,8 @@ import com.sinovoice.hcicloudsdk.api.HciCloudSys;
 import com.sinovoice.hcicloudsdk.common.HciErrorCode;
 import com.sinovoice.hcicloudsdk.common.InitParam;
 
+import java.io.File;
+
 /**
  * @author yuyh.
  * @date 2016/8/3.
@@ -37,6 +39,7 @@ public class ReaderApplication extends Application {
         initPrefs();
         initNightMode();
         //initHciCloud();
+
     }
 
     public static ReaderApplication getsInstance() {

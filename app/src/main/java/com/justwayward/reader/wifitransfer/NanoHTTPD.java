@@ -72,7 +72,7 @@ public abstract class NanoHTTPD {
         myServerSocket = new ServerSocket();
         myServerSocket.bind((hostname != null) ? new InetSocketAddress(
                 hostname, myPort) : new InetSocketAddress(myPort));
-
+        Log.i("NanoHTTPDIP", "server start=");
         myThread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -583,6 +583,7 @@ public abstract class NanoHTTPD {
                     files.put("content", saveTmpFile(fbuf, 0, fbuf.limit()));
 
                 // Ok, now do the serve()
+                Log.i("HttpSession","uri="+uri+"method="+method+"header="+header+"params="+parms+"files"+files);
                 Response r = serve(uri, method, header, parms, files);
                 if (r == null) {
                     Response.error(outputStream,

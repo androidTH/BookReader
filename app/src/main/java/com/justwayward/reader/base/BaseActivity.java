@@ -50,6 +50,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         transparent19and20();
         mContext = this;
         ButterKnife.bind(this);
+
         setupActivityComponent(ReaderApplication.getsInstance().getAppComponent());
         mCommonToolbar = ButterKnife.findById(this, R.id.common_toolbar);
         if (mCommonToolbar != null) {

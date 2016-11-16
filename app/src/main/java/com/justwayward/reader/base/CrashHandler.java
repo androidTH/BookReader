@@ -185,7 +185,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
         File file = new File(FileUtils.createRootPath(mContext) + "/log/" + fileName);
         FileUtils.createFile(file);
         FileUtils.writeFile(file.getAbsolutePath(), sb.toString());
-        // uploadCrashMessage(sb.toString());
+//         uploadCrashMessage(sb.toString());
         return null;
     }
 }

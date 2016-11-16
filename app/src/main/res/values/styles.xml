@@ -16,7 +16,11 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.NoActionBar.FullScreen" parent="AppTheme.NoActionBar">
+    <style name="starStyle" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/start_window</item>
+    </style>
+
+    <style name="FullScreen" parent="AppTheme.NoActionBar">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>

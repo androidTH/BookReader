@@ -10,6 +10,12 @@ import android.widget.ScrollView;
  * Created by zhangqi on 15/12/26.
  */
 public class XFScrollView extends ScrollView{
+
+//    http://www.jianshu.com/p/825f73d8afa1
+//    int height = adViewPager.getHeight() - rlSearchBar.getHeight();
+//    float fraction = (float) Math.min(Math.max(t, 0), height) / height;
+//    int alpha = (int) (fraction * 255);
+//    rlSearchBar.getBackground().setAlpha((int) (fraction * 255));
     private OnScrollListener mListener;
     private int downY;
     private int offsetY;

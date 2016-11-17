@@ -17,6 +17,7 @@
     </style>
 
     <style name="starStyle" parent="AppTheme.NoActionBar">
+        <!--<item name="android:windowBackground">@mipmap/bg_splash</item>-->
         <item name="android:windowBackground">@drawable/start_window</item>
     </style>
 

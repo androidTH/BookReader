@@ -42,9 +42,6 @@ public class BasePDFPagerAdapter extends PagerAdapter {
         init();
     }
 
-    /**
-     * This constructor was added for those who want to customize ViewPager's offScreenSize attr
-     */
     public BasePDFPagerAdapter(Context context, String pdfPath, int offScreenSize) {
         this.pdfPath = pdfPath;
         this.context = context;

@@ -8,8 +8,6 @@ import java.util.List;
  * @date 2016/8/4.
  */
 public class BookDetail implements Serializable {
-
-
     /**
      * _id : 525253d094336b3155000dd8
      * author : w风雪

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/touch_bg">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:appfont="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/touch_bg">
 
     <ImageView
         android:id="@+id/ivRecommendCover"
@@ -25,7 +26,7 @@
         android:layout_toRightOf="@+id/ivRecommendCover"
         android:orientation="vertical">
 
-        <TextView
+        <com.justwayward.reader.fontmanager.FontTextView
             android:id="@+id/tvRecommendTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,9 +35,10 @@
             android:maxLines="1"
             android:textColor="@color/common_h1"
             android:textSize="16sp"
+            appfont:font="@string/fontTitle"
             tools:text="逆鳞"/>
 
-        <TextView
+        <com.justwayward.reader.fontmanager.FontTextView
             android:id="@+id/tvLatelyUpdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,9 +46,10 @@
             android:layout_marginTop="4dp"
             android:textSize="12sp"
             android:textColor="@color/common_h2"
+            appfont:font="@string/fontNotice"
             tools:text="17小时前:"/>
 
-        <TextView
+        <com.justwayward.reader.fontmanager.FontTextView
             android:id="@+id/tvRecommendShort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +61,7 @@
             android:maxLines="1"
             android:textSize="12sp"
             android:textColor="@color/common_h2"
+            appfont:font="@string/fontNotice"
             tools:text="第二卷、逆水行舟！第四百六十五章、打蛇七寸！"/>
     </RelativeLayout>
 

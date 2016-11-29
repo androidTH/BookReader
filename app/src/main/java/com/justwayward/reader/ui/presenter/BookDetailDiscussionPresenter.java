@@ -35,6 +35,7 @@ public class BookDetailDiscussionPresenter extends RxPresenter<BookDetailDiscuss
                 .compose(RxUtil.<DiscussionList>rxCacheListHelper(key));
 
         //依次检查disk、network
+        //先读取本地缓存,本地没有走网络所以使用concat
         Subscription rxSubscription = Observable.concat(RxUtil.rxCreateDiskObservable(key, DiscussionList.class), fromNetWork)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<DiscussionList>() {

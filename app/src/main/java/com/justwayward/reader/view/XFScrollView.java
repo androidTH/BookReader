@@ -8,6 +8,8 @@ import android.widget.ScrollView;
 
 /**
  * Created by zhangqi on 15/12/26.
+ * 可以参照这个博客
+ * http://blog.csdn.net/nugongahou110/article/details/50409679
  */
 public class XFScrollView extends ScrollView{
 

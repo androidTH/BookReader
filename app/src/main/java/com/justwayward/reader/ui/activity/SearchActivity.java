@@ -123,6 +123,11 @@ public class SearchActivity extends BaseRVActivity<SearchDetail.SearchBooks> imp
     }
 
     @Override
+    public Context getBaseContext() {
+        return super.getBaseContext();
+    }
+
+    @Override
     public void configViews() {
         initAdapter(SearchAdapter.class, false, false);
 

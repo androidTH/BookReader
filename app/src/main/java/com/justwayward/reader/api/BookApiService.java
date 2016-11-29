@@ -43,31 +43,31 @@ import rx.Observable;
 
 public interface BookApiService {
 
-    @GET("/book/recommend")
+    @GET("book/recommend")
     Observable<Recommend> getRecomend(@Query("gender") String gender);
 
-    @GET("/atoc")
+    @GET("atoc")
     Observable<List<BookSource>> getBookSource(@Query("view") String view, @Query("book") String book);
 
-    @GET("/mix-toc/{bookId}")
+    @GET("mix-toc/{bookId}")
     Observable<BookRead> getBookRead(@Path("bookId") String bookId);
 
-    @GET("/mix-atoc/{bookId}")
+    @GET("mix-atoc/{bookId}")
     Observable<BookToc> getBookToc(@Path("bookId") String bookId, @Query("view") String view);
 
-    @GET("/btoc/{bookId}")
+    @GET("btoc/{bookId}")
     Observable<BookToc> getBookBToc(@Path("bookId") String bookId, @Query("view") String view);
 
     @GET("http://chapter2.zhuishushenqi.com/chapter/{url}")
     Observable<ChapterRead> getChapterRead(@Path("url") String url);
 
-    @GET("/post/post-count-by-book")
+    @GET("post/post-count-by-book")
     Observable<PostCount> postCountByBook(@Query("bookId") String bookId);
 
-    @GET("/post/total-count")
+    @GET("post/total-count")
     Observable<PostCount> postTotalCount(@Query("books") String bookId);
 
-    @GET("/book/hot-word")
+    @GET("book/hot-word")
     Observable<HotWord> getHotWord();
 
     /**
@@ -76,7 +76,7 @@ public interface BookApiService {
      * @param query
      * @return
      */
-    @GET("/book/auto-complete")
+    @GET("book/auto-complete")
     Observable<AutoComplete> autoComplete(@Query("query") String query);
 
     /**
@@ -85,7 +85,7 @@ public interface BookApiService {
      * @param query
      * @return
      */
-    @GET("/book/fuzzy-search")
+    @GET("book/fuzzy-search")
     Observable<SearchDetail> searchBooks(@Query("query") String query);
 
     /**
@@ -94,7 +94,7 @@ public interface BookApiService {
      * @param author
      * @return
      */
-    @GET("/book/accurate-search")
+    @GET("book/accurate-search")
     Observable<BooksByTag> searchBooksByAuthor(@Query("author") String author);
 
     /**
@@ -103,16 +103,16 @@ public interface BookApiService {
      * @param book
      * @return
      */
-    @GET("/post/review/best-by-book")
+    @GET("post/review/best-by-book")
     Observable<HotReview> getHotReview(@Query("book") String book);
 
-    @GET("/book-list/{bookId}/recommend")
+    @GET("book-list/{bookId}/recommend")
     Observable<RecommendBookList> getRecommendBookList(@Path("bookId") String bookId, @Query("limit") String limit);
 
-    @GET("/book/{bookId}")
+    @GET("book/{bookId}")
     Observable<BookDetail> getBookDetail(@Path("bookId") String bookId);
 
-    @GET("/book/by-tags")
+    @GET("book/by-tags")
     Observable<BooksByTag> getBooksByTag(@Query("tags") String tags, @Query("start") String start, @Query("limit") String limit);
 
     /**
@@ -120,7 +120,7 @@ public interface BookApiService {
      *
      * @return
      */
-    @GET("/ranking/gender")
+    @GET("ranking/gender")
     Observable<RankingList> getRanking();
 
     /**
@@ -131,7 +131,7 @@ public interface BookApiService {
      *
      * @return
      */
-    @GET("/ranking/{rankingId}")
+    @GET("ranking/{rankingId}")
     Observable<Rankings> getRanking(@Path("rankingId") String rankingId);
 
     /**
@@ -145,7 +145,7 @@ public interface BookApiService {
      * @param limit  20
      * @return
      */
-    @GET("/book-list")
+    @GET("book-list")
     Observable<BookLists> getBookLists(@Query("duration") String duration, @Query("sort") String sort, @Query("start") String start, @Query("limit") String limit, @Query("tag") String tag, @Query("gender") String gender);
 
     /**
@@ -153,7 +153,7 @@ public interface BookApiService {
      *
      * @return
      */
-    @GET("/book-list/tagType")
+    @GET("book-list/tagType")
     Observable<BookListTags> getBookListTags();
 
     /**
@@ -161,7 +161,7 @@ public interface BookApiService {
      *
      * @return
      */
-    @GET("/book-list/{bookListId}")
+    @GET("book-list/{bookListId}")
     Observable<BookListDetail> getBookListDetail(@Path("bookListId") String bookListId);
 
     /**
@@ -169,7 +169,7 @@ public interface BookApiService {
      *
      * @return
      */
-    @GET("/cats/lv2/statistics")
+    @GET("cats/lv2/statistics")
     Observable<CategoryList> getCategoryList();
 
     /**
@@ -177,7 +177,7 @@ public interface BookApiService {
      *
      * @return
      */
-    @GET("/cats/lv2")
+    @GET("cats/lv2")
     Observable<CategoryListLv2> getCategoryListLv2();
 
     /**
@@ -190,7 +190,7 @@ public interface BookApiService {
      * @param limit  50
      * @return
      */
-    @GET("/book/by-categories")
+    @GET("book/by-categories")
     Observable<BooksByCats> getBooksByCats(@Query("gender") String gender, @Query("type") String type, @Query("major") String major, @Query("minor") String minor, @Query("start") int start, @Query("limit") int limit);
 
 
@@ -211,7 +211,7 @@ public interface BookApiService {
      * @param distillate true(精品)
      * @return
      */
-    @GET("/post/by-block")
+    @GET("post/by-block")
     Observable<DiscussionList> getBookDisscussionList(@Query("block") String block, @Query("duration") String duration, @Query("sort") String sort, @Query("type") String type, @Query("start") String start, @Query("limit") String limit, @Query("distillate") String distillate);
 
     /**
@@ -220,7 +220,7 @@ public interface BookApiService {
      * @param disscussionId->_id
      * @return
      */
-    @GET("/post/{disscussionId}")
+    @GET("post/{disscussionId}")
     Observable<Disscussion> getBookDisscussionDetail(@Path("disscussionId") String disscussionId);
 
     /**
@@ -229,7 +229,7 @@ public interface BookApiService {
      * @param disscussionId->_id
      * @return
      */
-    @GET("/post/{disscussionId}/comment/best")
+    @GET("post/{disscussionId}/comment/best")
     Observable<CommentList> getBestComments(@Path("disscussionId") String disscussionId);
 
     /**
@@ -240,7 +240,7 @@ public interface BookApiService {
      * @param limit              30
      * @return
      */
-    @GET("/post/{disscussionId}/comment")
+    @GET("post/{disscussionId}/comment")
     Observable<CommentList> getBookDisscussionComments(@Path("disscussionId") String disscussionId, @Query("start") String start, @Query("limit") String limit);
 
     /**
@@ -259,7 +259,7 @@ public interface BookApiService {
      * @param distillate true(精品) 、空字符（全部）
      * @return
      */
-    @GET("/post/review")
+    @GET("post/review")
     Observable<BookReviewList> getBookReviewList(@Query("duration") String duration, @Query("sort") String sort, @Query("type") String type, @Query("start") String start, @Query("limit") String limit, @Query("distillate") String distillate);
 
     /**
@@ -268,7 +268,7 @@ public interface BookApiService {
      * @param bookReviewId->_id
      * @return
      */
-    @GET("/post/review/{bookReviewId}")
+    @GET("post/review/{bookReviewId}")
     Observable<BookReview> getBookReviewDetail(@Path("bookReviewId") String bookReviewId);
 
     /**
@@ -279,7 +279,7 @@ public interface BookApiService {
      * @param limit             30
      * @return
      */
-    @GET("/post/review/{bookReviewId}/comment")
+    @GET("post/review/{bookReviewId}/comment")
     Observable<CommentList> getBookReviewComments(@Path("bookReviewId") String bookReviewId, @Query("start") String start, @Query("limit") String limit);
 
     /**
@@ -296,7 +296,7 @@ public interface BookApiService {
      * @param distillate true(精品) 、空字符（全部）
      * @return
      */
-    @GET("/post/help")
+    @GET("post/help")
     Observable<BookHelpList> getBookHelpList(@Query("duration") String duration, @Query("sort") String sort, @Query("start") String start, @Query("limit") String limit, @Query("distillate") String distillate);
 
     /**
@@ -305,7 +305,7 @@ public interface BookApiService {
      * @param helpId->_id
      * @return
      */
-    @GET("/post/help/{helpId}")
+    @GET("post/help/{helpId}")
     Observable<BookHelp> getBookHelpDetail(@Path("helpId") String helpId);
 
     /**
@@ -316,10 +316,10 @@ public interface BookApiService {
      * @param platform_code  “QQ”
      * @return
      */
-    @POST("/user/login")
+    @POST("user/login")
     Observable<Login> login(@Body LoginReq loginReq);
 
-    @GET("/user/followings/{userid}")
+    @GET("user/followings/{userid}")
     Observable<Following> getFollowings(@Path("userid") String userId);
 
     /**
@@ -335,7 +335,7 @@ public interface BookApiService {
      * @param limit 20
      * @return
      */
-    @GET("/post/by-book")
+    @GET("post/by-book")
     Observable<DiscussionList> getBookDetailDisscussionList(@Query("book") String book, @Query("sort") String sort, @Query("type") String type, @Query("start") String start, @Query("limit") String limit);
 
     /**
@@ -350,9 +350,9 @@ public interface BookApiService {
      * @param limit 20
      * @return
      */
-    @GET("/post/review/by-book")
+    @GET("post/review/by-book")
     Observable<HotReview> getBookDetailReviewList(@Query("book") String book, @Query("sort") String sort, @Query("start") String start, @Query("limit") String limit);
 
-    @GET("/post/original")
+    @GET("post/original")
     Observable<DiscussionList> getBookOriginalList(@Query("block") String block, @Query("duration") String duration, @Query("sort") String sort, @Query("type") String type, @Query("start") String start, @Query("limit") String limit, @Query("distillate") String distillate);
 }
